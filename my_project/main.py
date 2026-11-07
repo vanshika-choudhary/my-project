@@ -3,13 +3,16 @@ import pandas as pd
 import plotly.express as px
 from streamlit_option_menu import option_menu
 import plotly.graph_objects as go
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parent
 
 st.set_page_config(page_icon=":dollar:",
                    page_title="Personal Finance Analysis",
                    layout="wide")
 st.title("Personal Finance Analysis")
-df=pd.read_csv("cleaned_dataset.csv")
-df2=pd.read_csv("Monthly_summary.csv")
+df=pd.read_csv(BASE_DIR/dataset/"cleaned_dataset.csv")
+df2=pd.read_csv(BASE_DIR/dataset/"Monthly_summary.csv")
 
 with st.sidebar:
     op=option_menu("Option Menu",["Home","Dataset","Preprocessing","Categorical Analysis","Monthly Analysis","Saving Analysis","Summary","About"],
