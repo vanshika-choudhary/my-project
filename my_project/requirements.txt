@@ -1,0 +1,8 @@
+In this project i have used these libraries of python :
+    streamlit
+    pandas
+    numpy
+    plotly
+    matplotlib
+    streamlit-option-menu
+    
